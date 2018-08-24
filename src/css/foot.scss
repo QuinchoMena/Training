@@ -1,0 +1,26 @@
+footer {
+    position: relative;
+    height: 90px;
+    clear: both;
+    width: 100%;
+    background-image: url(../images/footer.png);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-color: black;
+}
+.FooterTwo {
+    position: absolute;
+    right: 225px;
+    top: 26px;
+    color: white;
+    font-size: 14px;
+}
+
+.FooterTree {
+    position: absolute;
+    left: 225px;
+    top: 26px;
+    color: white;
+    font-size: 14px;
+}
+
