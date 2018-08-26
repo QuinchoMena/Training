@@ -1,16 +1,63 @@
-.sixcol-menu{
-    width: 48%;
+.intro{
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    float: left;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &__title{
+        font-size: 42px;
+        line-height: 1.5em;
+        color: #666666;
+        text-align: left;
+        padding-top: 13px;
+        font-weight: 600;
+    }
+
+    &__paragraph{
+        font-size: 15px;
+        line-height: 1.6em;
+        color: #666666;
+        text-align: left;
+        border-bottom: 1px solid #C8C8C8;
+        margin-top: 7px;
+        padding-bottom: 18px;
+
+    }
+}
+
+@media handheld, only screen and (max-width: 320px)
+{
+    .intro__title {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media handheld, only screen and (max-width: 800px)
+{
+    .intro__title {
+        font-size: 34px;
+        padding: 10px;
+    }
+}
+
+
+
+.littlespan{
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 .nav-menu{
-    position: absolute;
-    width: 540px;
+    width: auto;
     top: 35px;
     right: 3px;
     border-top: 1px solid #C8C8C8;
     border-bottom: 1px solid #C8C8C8;
 }
-
 
 .nav-menu--items{
     display: flex;
@@ -19,6 +66,30 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+
+@media handheld, only screen and (max-width: 600px)
+{
+    .nav-menu--items{
+        margin: 0px;
+        padding: 0px;
+        float: none;
+    }
+}
+
+
+
+@media handheld, only screen and (max-width: 600px)
+{
+    .nav-menu {
+        float: left;
+        margin-top: 67px;
+        left: 12px;
+        border: none;
+        width: 90%;
+    }
+}
+
 
 .item{
     float: left;

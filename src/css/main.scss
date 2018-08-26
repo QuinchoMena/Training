@@ -15,40 +15,46 @@
 	background-repeat: repeat;
 }
 
-.parts{
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: transparent;
-}
-
-.row {
-    margin: 0 auto;
-    max-width: 1140px;
-    min-width: 755px;
-    width: 100%
-}
-
-header{
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.intro {
-    width: 100%;
-    position: relative;
-    float: left;
-    background: transparent;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-a{
+.link{
     text-decoration: underline;
     color: #666666;
 }
+
+.paragraph{
+    text-decoration: none;
+    color: #666666;
+}
+
+@media handheld, only screen and (max-width: 768px)
+{
+    .row, body, .container {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        float: left;
+    }
+}
+
+
+
+
+@media handheld, only screen and (max-width: 768px)
+{
+    .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+        width: auto;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
 
 
