@@ -41,6 +41,24 @@
     padding: 8px;
 }
 
+@media (min-width: 320px) and (max-width: 374px)
+{
+    .photo{
+        width: 260px;
+        height: 300px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1200px)
+{
+    .photo{
+        width: 400px;
+        height: 400px;
+    }
+
+}
+
 .button{
     text-decoration: underline;
 
