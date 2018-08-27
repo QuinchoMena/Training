@@ -8,18 +8,9 @@
 
 .fourcol{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-direction: column;
     text-align: left;
-}
-
-.internal-content{
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	color: #ffffff;
-	padding: 15px;
-	font-size: 16px;
 }
 
 .box{
@@ -27,6 +18,8 @@
     margin-bottom: 30px;
     margin-top: 22px;
     float: left;
+    display: flex;
+    flex-direction: column;
 
     &__title{
         font-size: 22px;
@@ -68,3 +61,18 @@
     }
 
 }
+
+
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    .button__title{
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .button__title{
+        font-size: 27px;
+    }
+ }

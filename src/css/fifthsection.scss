@@ -10,7 +10,7 @@ footer {
 }
 .FooterTwo {
     position: absolute;
-    right: 225px;
+    right: 100px;
     top: 26px;
     color: white;
     font-size: 14px;
@@ -18,9 +18,16 @@ footer {
 
 .FooterTree {
     position: absolute;
-    left: 225px;
+    left: 50px;
     top: 26px;
     color: white;
     font-size: 14px;
 }
 
+@media(max-width: 800px)
+{
+    .FooterTree {
+        display: none;
+    }
+
+}

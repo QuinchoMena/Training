@@ -25,9 +25,23 @@
     color: #666666;
 }
 
-@media handheld, only screen and (max-width: 768px)
+@media (min-width: 768px) and (max-width: 991.98px)
 {
-    .row, body, .container {
+    .paragraph{
+        font-size: 19px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .paragraph{
+        font-size: 26px;
+    }
+ }
+
+@media(max-width: 768px)
+{
+    .row, body, .container, .pages {
         width: 100%;
         min-width: 0;
         margin-left: 0px;
@@ -36,22 +50,9 @@
         padding-right: 0px;
         float: left;
     }
+
 }
 
-
-
-
-@media handheld, only screen and (max-width: 768px)
-{
-    .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
-        width: auto;
-        float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
 
 
 
