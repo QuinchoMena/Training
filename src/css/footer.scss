@@ -8,7 +8,7 @@ footer {
     background-repeat: repeat-x;
     background-color: black;
 }
-.FooterTwo {
+.copyright {
     position: absolute;
     right: 100px;
     top: 26px;
@@ -16,7 +16,7 @@ footer {
     font-size: 14px;
 }
 
-.FooterTree {
+.authorized {
     position: absolute;
     left: 50px;
     top: 26px;
@@ -24,9 +24,9 @@ footer {
     font-size: 14px;
 }
 
-@media(max-width: 800px)
+@media(min-width: 768px)
 {
-    .FooterTree {
+    .authorized {
         display: none;
     }
 
