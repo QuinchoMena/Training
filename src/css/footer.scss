@@ -1,32 +1,29 @@
-footer {
+@import "colors";
+.footer {
     position: relative;
     height: 90px;
-    clear: both;
-    width: 100%;
-    background-image: url(../images/footer.png);
-    background-position: left top;
-    background-repeat: repeat-x;
-    background-color: black;
-}
-.copyright {
-    position: absolute;
-    right: 100px;
-    top: 26px;
-    color: white;
-    font-size: 14px;
+    background-color: $black;
+
+    &__copyright {
+        position: absolute;
+        right: 100px;
+        top: 26px;
+        color: $white;
+        font-size: 14px;
+    }
+
+    &__authorized {
+        position: absolute;
+        left: 50px;
+        top: 26px;
+        color: $white;
+        font-size: 14px;
+    }
 }
 
-.authorized {
-    position: absolute;
-    left: 50px;
-    top: 26px;
-    color: white;
-    font-size: 14px;
-}
-
-@media(min-width: 768px)
+@media(max-width: 768px)
 {
-    .authorized {
+    .footer__authorized {
         display: none;
     }
 
