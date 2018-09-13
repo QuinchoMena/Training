@@ -57,83 +57,59 @@ function effective(pTypePokemon1,pTypePokemon2){
   var pokemonEffectiveness
 
   var pokemonType = {
-    'fire' : function () {
-      if(pTypePokemon2 == 'grass'){
-        pokemonEffectiveness = getEffectivenessPoints('High');
-      }
-      else if(pTypePokemon2 === 'water'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 === 'fire'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 == 'electric'){
-        pokemonEffectiveness = getEffectivenessPoints('Neutral');    
-      }
-      else{
-        console.log('Sorry, the type of Pokemon dont exist');
-      }
+    'fire-grass': function () {
+      pokemonEffectiveness = getEffectivenessPoints('High');
     },
-    'grass' : function () {
-      if(pTypePokemon2 == 'fire'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 === 'grass'){
-        pokemonEffectiveness = getEffectivenessPoints('High');
-      }
-      else if(pTypePokemon2 === 'water'){
-        pokemonEffectiveness = getEffectivenessPoints('High');
-      }
-      else if(pTypePokemon2 == 'electric'){
-        pokemonEffectiveness = getEffectivenessPoints('Neutral'); 
-      }
-      else{
-        console.log('Sorry, the type of Pokemon dont exist');
-      }
-
+    'fire-water': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
     },
-    'water' : function () {
-      if(pTypePokemon2 == 'fire'){
-        pokemonEffectiveness = getEffectivenessPoints('High');
-      }
-      else if(pTypePokemon2 === 'grass'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 === 'water'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 == 'electric'){
-        pokemonEffectiveness = getEffectivenessPoints('Neutral');        
-      }
-      else{
-        console.log('Sorry, the type of Pokemon dont exist');
-      }
-
+    'fire-fire': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
     },
-    'electric' : function () {
-      if(pTypePokemon2 == 'fire'){
-        pokemonEffectiveness = getEffectivenessPoints('Neutral');         
-      }
-      else if(pTypePokemon2 === 'water'){
-        pokemonEffectiveness = getEffectivenessPoints('High');
-      }
-      else if(pTypePokemon2 == 'grass'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else if(pTypePokemon2 == 'electric'){
-        pokemonEffectiveness = getEffectivenessPoints('Little');
-      }
-      else{
-        console.log('Sorry, the type of Pokemon dont exist');
-      }
-      
-
+    'fire-electric': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Neutral');
+    },
+    'grass-fire': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
+    },
+    'grass-grass': function () {
+      pokemonEffectiveness = getEffectivenessPoints('High');
+    },
+    'grass-water': function () {
+      pokemonEffectiveness = getEffectivenessPoints('High');
+    },
+    'grass-electric': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Neutral');
+    },
+    'water-fire': function () {
+      pokemonEffectiveness = getEffectivenessPoints('High');
+    },
+    'water-grass': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
+    },
+    'water-water': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
+    },
+    'water-electric': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Neutral');
+    },
+    'electric-fire': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Neutral');
+    },
+    'electric-water': function () {
+      pokemonEffectiveness = getEffectivenessPoints('High');
+    },
+    'electric-grass': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
+    },
+    'electric-electric': function () {
+      pokemonEffectiveness = getEffectivenessPoints('Little');
     },
     'default' : function () {
       pokemonEffectiveness = 'Sorry, the type of Pokemon dont exist';
     }
   };
-  (pokemonType[pTypePokemon1] || pokemonType['default'])();
+  (pokemonType[pTypePokemon1+"-"+pTypePokemon2] || pokemonType['default'])();
 
   return pokemonEffectiveness;
 
