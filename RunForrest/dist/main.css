@@ -1,0 +1,4 @@
+.frame{background-image:url(../images/banner-mobile.png)}
+.footer{background-color:#000}
+.page{font-family:Open Sans,sans-serif;font-size:15px;background-color:#fff;color:#575757;margin:0 0 1px;height:100%;border-top:10px solid #000}.background{background-image:url(/images/bg.png);background-position:0 0;background-repeat:repeat}.link{text-decoration:underline;color:#666;margin-left:25px}.paragraph{text-decoration:none;color:#666;font-size:100%}@media (min-width:1024px) and (max-width:1200px){.paragraph{font-size:22px}}
+.navbar{display:flex;flex-direction:row;justify-content:space-between;background-color:#000}.menu{display:flex;flex-direction:column;margin-right:12px}.menu__rectangle{width:53px;height:9px;background-color:#fff;margin-top:5px}
