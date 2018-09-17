@@ -4,13 +4,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />    
 <title>Diseño Web</title>
+<script type="text/javascript" src="../js/main.js"></script>
 <link href="main.css" rel="stylesheet" type="text/css">    
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body class="page">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
+    <script src=""></script>
     <nav class="navbar">
-        <div class="logo">
+        <div class="navbar__logo">
             <img src="images/logo.png" alt="logo">
         </div>
         <div class="menu">
@@ -18,20 +20,68 @@
             <div class="menu__rectangle"></div>
             <div class="menu__rectangle"></div>
         </div>
-    </nav>
+    </nav>        
     <div class="body-content">
         <div class="frame"></div>
-        <div class="body-content__title">
-            Los mejores agentes de seguridad
+        <div class="main-title">
+            Los Mejores agentes de seguridad
         </div>
         <div class="search-bar">
-
+            <div class="search-bar__title">Buscar por Ubicación</div>
+            <div class="search-bar__icon"></div>
+        </div>
+        <div class="agents">
+            <div class="box-agent">
+                <div class="box-agents-title">
+                    <div class="box-agents-title__name">Chuck Norris Bodyguards</div>
+                    <div class="box-agents-title__icon"></div>
+                </div>
+                <div class="box-agents-content">
+                    <div class="box-agents-content__photo"></div>
+                    <div class="box-agents-content__description">Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Fusce eleifend vel enim ac lacinia.
+                        Phasellus ac nisl id velit tristique 
+                        accumsan nec at enim. Etiam posuere tellus 
+                        ut ligula feugiat auctor. Morbi ut quam aliquet,
+                        viverra purus in, convallis ante.
+                    </div>
+                </div>
+                <div class="box-agents-settings">
+                        <div class="box-agents-settings__price">Desde: $15 / 12 horas</div>
+                        <div class="box-agents-settings__button">Contratar</div>
+                </div>
+            </div>
+            <div class="box-agent">
+                <div class="box-agents-title">
+                        <div class="box-agents-title__name">Chuck Norris Bodyguards</div>
+                        <div class="box-agents-title__icon"></div>
+                    </div>
+                    <div class="box-agents-content">
+                        <div class="box-agents-content__photo"></div>
+                        <div class="box-agents-content__description">Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce eleifend vel enim ac lacinia.
+                            Phasellus ac nisl id velit tristique 
+                            accumsan nec at enim. Etiam posuere tellus 
+                            ut ligula feugiat auctor. Morbi ut quam aliquet,
+                            viverra purus in, convallis ante.
+                        </div>
+                    </div>
+                    <div class="box-agents-settings">
+                            <div class="box-agents-settings__price">Desde: $15 / 12 horas</div>
+                            <div class="box-agents-settings__button">Contratar</div>
+                    </div>
+            </div>
+            
         </div>
     </div>
     <footer class="footer">
-        <div class="footer__authorized">
+        <div class="footer__company">
             Desarrollado por Akurey.com 
-            Todos los Derechos Reservados.
+        </div>
+        <div class="footer__authorized">
+                Todos los Derechos Reservados.
         </div>
         <div class="footer__copyright">
             Términos y Condiciones

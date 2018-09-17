@@ -1,5 +1,131 @@
 @import "colors";
 
 .frame{
+    height: 304px;
     background-image: url("../images/banner-mobile.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-title{
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 27px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: $grey;
+    margin: 10px 27px 10px 27px;
+    height: 44px;
+
+    &__title{
+        font-size: 18px;
+        font-weight: normal;
+        color: $grey;
+    }
+
+    &__icon{
+        width: 23px;
+        height: 23px;
+        background-image: url("../images/lupa.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.box-agents-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__name{
+        font-size: 18px;
+    }
+    &__icon{
+        width: 26px;
+        height: 26px;
+        background-image: url("../images/certified.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+
+.box-agent{
+    margin: 20px 10px 20px 10px;
+}
+.box-agents-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__photo{
+        width: 600px;
+        height: 120px;
+        background-image: url("../images/Chuck.png");
+        background-position: center;
+        background-size: cover;
+    }
+    &__description{
+        text-align: justify;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 25px;
+
+    }
+
+}
+
+.box-agents-settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__button{
+        background-color: $black;
+        color: $white;
+        font-size: 12px;
+        font-weight: normal;
+        border-radius: 18px; 
+        padding: 5px;
+        width: 80px;
+        text-align: center;
+    }
+    &__price{
+        text-align: justify;
+        font-size: 12px;
+        font-weight: normal;
+
+    }
+
+}
+
+
+
+
+@media(min-width: 768px)
+{
+    .frame{
+        height: 428px;
+        background-image: url("../images/banner.png");
+    }
+}
+@media(min-width: 1024px)
+{
+    .frame{
+        height: 500px;
+    }
+
 }

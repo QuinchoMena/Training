@@ -1,38 +1,10 @@
 @import "colors";
 .page{
-	font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    background-color: $white;
-    color: $grey34;
-    margin: 0 0 1px;
-    height: 100%;
-    border-top: 10px solid $black;
+    padding: 0;
+	margin: 0;
+    font-family: 'Arial';
+    font-weight: bold;
 }
-
-.background{
-	background-image: url("/images/bg.png");
-	background-position: left top;
-	background-repeat: repeat;
-}
-
-.link{
-    text-decoration: underline;
-    color: $dark-grey;
-    margin-left: 25px;
-}
-
-.paragraph{
-    text-decoration: none;
-    color: $dark-grey;
-    font-size: 100%;
-}
-
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-    .paragraph{
-        font-size: 22px;
-    }
- }
 
 
 

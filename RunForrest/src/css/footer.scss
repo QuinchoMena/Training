@@ -1,4 +1,23 @@
 @import "colors";
 .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: $black;
+    color: $white;
+    font-size: 12px;
+    line-height: 14px;
+    
+    &__company{
+        margin-left: 27px;
+    }
+    &__authorized{
+        margin-left: 27px;
+    }
+    &__copyright{
+        margin-top: 8px;
+        margin-left: 27px;
+        text-decoration: underline;
+    }
 }
+
