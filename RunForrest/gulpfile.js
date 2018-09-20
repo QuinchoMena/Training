@@ -6,6 +6,13 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
+
+var DIST = 'dist';
+
+var dist = function(subpath) {
+	return !subpath ? DIST : path.join(DIST, subpath);
+};
+
 gulp.task('sass', function () {
 	gulp.src('./src/css/*.scss')
 		.pipe(plumber())
@@ -48,6 +55,19 @@ gulp.task('html', function () {
 		}));
 });
 
+// Copy all files at the root level (app)
+gulp.task('copyImages', function() {
+	gulp.src([
+		'./src/images/*',
+	]).pipe(gulp.dest("./dist/images"));
+});
+
+// Copy all files at the root level (app)
+gulp.task('copyJsonFiles', function() {
+	gulp.src([
+		'./src/json/*',
+	]).pipe(gulp.dest("./dist/json"));
+});
 
 // Default task
-gulp.task('default', ['sass', 'html', 'watch', 'serve']);
+gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsonFiles']);

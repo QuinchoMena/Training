@@ -4,13 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />    
 <title>Diseño Web</title>
-<script type="text/javascript" src="../js/main.js"></script>
 <link href="main.css" rel="stylesheet" type="text/css">    
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.min.js"></script>
 </head>
 <body class="page">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
-    <script src=""></script>
     <nav class="navbar">
         <div class="navbar__logo">
             <img src="images/logo.png" alt="logo">
@@ -32,72 +32,8 @@
                 <div class="search-bar__icon"></div>
             </div>
         </div>
-        <div class="agents">
-            <div class="box-agent">
-                <div class="box-agents-title">
-                    <div class="box-agents-title__name">Chuck Norris Bodyguards</div>
-                    <div class="box-agents-title__icon"></div>
-                </div>
-                <div class="box-agents-content">
-                    <div class="box-agents-content__photo"></div>
-                    <div class="box-agents-content__description">Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit. 
-                        Fusce eleifend vel enim ac lacinia.
-                        Phasellus ac nisl id velit tristique 
-                        accumsan nec at enim. Etiam posuere tellus 
-                        ut ligula feugiat auctor. Morbi ut quam aliquet,
-                        viverra purus in, convallis ante.
-                    </div>
-                </div>
-                <div class="box-agents-settings">
-                        <div class="box-agents-settings__price">Desde: $15 / 12 horas</div>
-                        <div class="box-agents-settings__button">Contratar</div>
-                </div>
-            </div>
-            <div class="box-agent">
-                <div class="box-agents-title">
-                        <div class="box-agents-title__name">Chuck Norris Bodyguards</div>
-                        <div class="box-agents-title__icon"></div>
-                    </div>
-                    <div class="box-agents-content">
-                        <div class="box-agents-content__photo"></div>
-                        <div class="box-agents-content__description">Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Fusce eleifend vel enim ac lacinia.
-                            Phasellus ac nisl id velit tristique 
-                            accumsan nec at enim. Etiam posuere tellus 
-                            ut ligula feugiat auctor. Morbi ut quam aliquet,
-                            viverra purus in, convallis ante.
-                        </div>
-                    </div>
-                    <div class="box-agents-settings">
-                            <div class="box-agents-settings__price">Desde: $15 / 12 horas</div>
-                            <div class="box-agents-settings__button">Contratar</div> 
-                    </div>
-            </div>
-            <div class="box-agent">
-                <div class="box-agents-title">
-                    <div class="box-agents-title__name">Chuck Norris Bodyguards</div>
-                    <div class="box-agents-title__icon"></div>
-                </div>
-                <div class="box-agents-content">
-                    <div class="box-agents-content__photo"></div>
-                    <div class="box-agents-content__description">Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing elit. 
-                                Fusce eleifend vel enim ac lacinia.
-                                Phasellus ac nisl id velit tristique 
-                                accumsan nec at enim. Etiam posuere tellus 
-                                ut ligula feugiat auctor. Morbi ut quam aliquet,
-                                viverra purus in, convallis ante.
-                            </div>
-                    </div>
-                    <div class="box-agents-settings">
-                        <div class="box-agents-settings__price">Desde: $15 / 12 horas</div>
-                        <div class="box-agents-settings__button">Contratar</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="agents"></div>
+    </div>
     <footer class="footer">
         <div class="footer__authorized">
             Desarrollado por Akurey.com Todos los Derechos Reservados.
@@ -106,5 +42,35 @@
             Términos y Condiciones
         </div>
     </footer>
+    
+    
+    <script id="template" type="text/x-handlebars-template">
+        {{#companies}}
+        <div class="box-agent">
+            <div class="box-agents-title">
+                <div class="box-agents-title__name">{{name}}</div>
+                {{#isCertified}}
+                <div class="box-agents-title__icon"></div>
+                {{/isCertified}}
+            </div>
+            <div class="box-agents-content">
+
+                <div class="box-agents-content__description">{{description}}</div>
+            </div>
+            <div class="box-agents-settings">
+                <div class="box-agents-settings__price">Desde: {{rate}} / {{hours}} horas</div>
+                <div class="box-agents-settings__button">Contratar</div>
+            </div>
+        </div>
+        {{/companies}}  
+    </script>
+
+    <script type="text/javascript">
+        $.getJSON("../json/data.json", function(data) {
+        var templateX = $('#template').html();
+        var text = Mustache.render(templateX,data);
+        $('#agents').html(text);
+    });
+    </script>
 </body>
 </html>
