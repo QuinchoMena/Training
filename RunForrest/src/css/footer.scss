@@ -1,18 +1,19 @@
 @import "colors";
+@import "_variables.scss";
 
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @extend %flexRow;
     background-color: $black;
     color: $white;
     font-size: 12px;
     line-height: 14px;
     
-    &__company,&__authorized,&__copyright{
+    &__authorized,&__copyright{
         margin-left: 27px;
+        width: 195px;
     }
+
     &__copyright{
         margin-top: 8px;
         margin-bottom: 5px;
@@ -28,6 +29,10 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+
+        &__authorized{
+            width: 400px;
+        }
     }
 }
 

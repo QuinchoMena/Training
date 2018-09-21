@@ -1,8 +1,8 @@
-@import "colors";
+@import "_colors.scss";
+@import "_variables.scss";
 
 .frame{
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     height: 304px;
     background-image: url("../images/banner-mobile.png");
     background-position: center;
@@ -18,9 +18,7 @@
     width: 70%;
 }
 .search-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @extend %flexRow;
     align-items: center;
     border: 2px solid;
     border-radius: 20px;
@@ -45,9 +43,7 @@
 
 
 .box-agents-title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @extend %flexRow;
     align-items: center;
 
     &__name{
@@ -64,8 +60,7 @@
 }
 
 #agents{
-    display: flex;
-    flex-direction: row;
+    @extend %flexRow;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -74,9 +69,7 @@
     width: 300px;
 }
 .box-agents-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @extend %flexRow;
     align-items: center;
 
     &__photo{
@@ -96,9 +89,7 @@
 }
 
 .box-agents-settings{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @extend %flexRow;
     align-items: center;
 
     &__button{
@@ -119,7 +110,6 @@
     }
 
 }
-
 
 
 

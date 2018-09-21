@@ -66,7 +66,7 @@
     </script>
 
     <script type="text/javascript">
-        $.getJSON("../json/data.json", function(data) {
+        $.getJSON("https://api.myjson.com/bins/uptto", function(data) {
         var templateX = $('#template').html();
         var text = Mustache.render(templateX,data);
         $('#agents').html(text);
