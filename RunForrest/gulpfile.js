@@ -69,5 +69,12 @@ gulp.task('copyJsonFiles', function() {
 	]).pipe(gulp.dest("./dist/json"));
 });
 
+// Copy all files at the root level (app)
+gulp.task('copyJavaScriptFiles', function() {
+	gulp.src([
+		'./src/js/*',
+	]).pipe(gulp.dest("./dist/js"));
+});
+
 // Default task
-gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsonFiles']);
+gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsonFiles','copyJavaScriptFiles']);
