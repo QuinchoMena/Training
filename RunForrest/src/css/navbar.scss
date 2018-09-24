@@ -3,13 +3,14 @@
 .navbar{
     width: 100%;
     height: 77px;
-    border: 0px black solid;
+    border: 0px $black solid;
     @extend %flexRow;
     justify-content: space-between;
     background-color: $black;
 
     &__logo{
-        margin-left: 9px;
+        margin-top: 13px;
+        margin-left: 19px;
     }
 }
 .navbar-menu{
@@ -21,7 +22,32 @@
         width: 53px;
         height: 9px;
         background-color: $white;
-        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    &__text{
+        display: none;
+    }
+}
+
+@media(min-width: 1024px){
+    .navbar-menu__rectangle{
+        display: none;
+    }
+    .navbar-menu__text{
+        display: block;
+        font-size: 16px;
+        color: white;
+    }
+    .linkAgents,.linkContact,.linkIngresar{
+        text-decoration: none;
+        color: $white;
+    }
+    .linkContact{
+        margin-left: 5px;
+    }
+    .linkIngresar{
+        margin-left: 60px;
     }
 }
 

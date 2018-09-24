@@ -12,9 +12,7 @@
 .main-title{
     font-size: 24px;
     line-height: 28px;
-    margin-left: 27px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 95px 15px 27px;
     width: 70%;
 }
 .search-bar{
@@ -23,13 +21,14 @@
     border: 2px solid;
     border-radius: 20px;
     border-color: $grey;
-    margin: 10px 27px 10px 27px;
+    margin: 15px 30px 17px 27px;
     height: 44px;
 
     &__title{
         font-size: 18px;
         font-weight: normal;
         color: $grey;
+        margin: 13px 0px 10px 15px;
     }
 
     &__icon{
@@ -38,6 +37,7 @@
         background-image: url("../images/lupa.png");
         background-position: center;
         background-size: cover;
+        margin: 8px 20px 13px 0px;
     }
 }
 
@@ -91,22 +91,23 @@
 .box-agents-settings{
     @extend %flexRow;
     align-items: center;
+    justify-content: space-between;
 
     &__button{
         background-color: $black;
         color: $white;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: normal;
         border-radius: 18px; 
-        padding: 5px;
+        padding: 8px 46px 9px 46px;
+        margin-right: 24px;
         width: 80px;
         text-align: center;
     }
     &__price{
+        margin-right: 13px;
         text-align: justify;
-        font-size: 12px;
-        font-weight: normal;
-
+        font-size: 14px;
     }
 
 }
