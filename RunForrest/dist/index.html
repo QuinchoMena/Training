@@ -10,7 +10,6 @@
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body class="page" onload="callPromise()">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.min.js"></script>
     <nav class="navbar">
         <div class="navbar__logo">
             <img src="images/logo.png" alt="logo">
@@ -19,6 +18,11 @@
             <div class="navbar-menu__rectangle"></div>
             <div class="navbar-menu__rectangle"></div>
             <div class="navbar-menu__rectangle"></div>
+            <div class="navbar-menu__text">
+                <div class="linkAgents">Directorio de Agentes</div>
+                <div class="linkContact">Contacto</div>
+                <div class="linkIngresar">Ingresar</div>
+            </div>
         </div>
     </nav>        
     <div class="body-content">
@@ -28,7 +32,7 @@
                 Los Mejores agentes de seguridad
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar por Ubicacion" name="inpuSearch" onkeypress="validate(event)">
+                <input type="text" class="search-bar__title" placeholder="Buscar por Ubicacion" name="inpuSearch" onkeypress="validate(event)">
                 <div class="search-bar__icon" onclick="callPromise()"></div>
             </div>
         </div>
@@ -43,7 +47,6 @@
         </div>
     </footer>
     
-    
     <script id="template" type="text/html">
         {{#companies}}
         <div class="box-agent">
@@ -53,6 +56,7 @@
                 <div class="box-agents-title__icon"></div>
                 {{/isCertified}}
             </div>
+            <hr/>
             <div class="box-agents-content">
                 <img class="box-agents-content__photo" src="{{image}}">
                 <div class="box-agents-content__description">{{description}}</div>

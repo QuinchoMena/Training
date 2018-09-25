@@ -2,13 +2,15 @@
 @import "_variables.scss";
 
 .frame{
-    @extend %flexColumn;
     height: 304px;
     background-image: url("../images/banner-mobile.png");
     background-position: center;
     background-size: cover;
 }
 
+hr{
+    background-color: $grey60;
+}
 .main-title{
     font-size: 24px;
     line-height: 28px;
@@ -21,8 +23,8 @@
     border: 2px solid;
     border-radius: 20px;
     border-color: $grey;
-    margin: 15px 30px 17px 27px;
     height: 44px;
+    margin: 15px 30px 17px 27px;
 
     &__title{
         font-size: 18px;
@@ -43,7 +45,10 @@
 
 
 .box-agents-title{
-    @extend %flexRow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
     align-items: center;
 
     &__name{
@@ -65,7 +70,8 @@
     justify-content: space-evenly;
 }
 .box-agent{
-    margin: 20px 10px 20px 10px;
+    margin-top: 18px;
+    margin-bottom: 25px; 
     width: 300px;
 }
 .box-agents-content{
@@ -73,7 +79,6 @@
     align-items: center;
 
     &__photo{
-        width: 600px;
         height: 120px;
         background-position: center;
         background-size: cover;

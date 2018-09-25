@@ -3,20 +3,24 @@
 
 
 .footer {
-    @extend %flexRow;
     background-color: $black;
     color: $white;
     font-size: 12px;
     line-height: 14px;
+
     
     &__authorized,&__copyright{
-        margin-left: 27px;
+        margin-left: 21px;
         width: 195px;
     }
 
+    &__authorized{
+        padding-top: 14px;
+    }
+
     &__copyright{
-        margin-top: 8px;
-        margin-bottom: 5px;
+        padding-top: 13px;
+        padding-bottom: 19px;
         text-decoration: underline;
     }
 }
