@@ -6,34 +6,33 @@
 <title>Diseño Web</title>
 <link href="main.css" rel="stylesheet" type="text/css">    
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+
 </head>
-<body class="page" onload="callPromise()">
+<body class="page" id="page">
     <nav class="navbar">
         <div class="navbar__logo">
             <img src="images/logo.png" alt="logo">
         </div>
-        <div class="navbar-menu">
-            <div class="navbar-menu__rectangle"></div>
-            <div class="navbar-menu__rectangle"></div>
-            <div class="navbar-menu__rectangle"></div>
-            <div class="navbar-menu__text">
+        <div class="navbarMenu">
+            <div class="navbarMenu__rectangle"></div>
+            <div class="navbarMenu__rectangle"></div>
+            <div class="navbarMenu__rectangle"></div>
+            <div class="navbarMenu__text">
                 <div class="linkAgents">Directorio de Agentes</div>
                 <div class="linkContact">Contacto</div>
                 <div class="linkIngresar">Ingresar</div>
             </div>
         </div>
     </nav>        
-    <div class="body-content">
+    <div class="bodyContent">
         <div class="header">
             <div class="frame"></div>
-            <div class="main-title">
+            <div class="mainTitle">
                 Los Mejores agentes de seguridad
             </div>
-            <div class="search-bar">
-                <input type="text" class="search-bar__title" placeholder="Buscar por Ubicacion" name="inpuSearch" onkeypress="validate(event)">
-                <div class="search-bar__icon" onclick="callPromise()"></div>
+            <div class="searchBar">
+                <input type="text" class="searchBar__title" placeholder="Buscar por Ubicacion" name="inpuSearch" id="searchBar__title">
+                <div class="searchBar__icon" id="searchBar__icon"></div>
             </div>
         </div>
         <div id="agents"></div>
@@ -46,27 +45,9 @@
             Términos y Condiciones
         </div>
     </footer>
-    
-    <script id="template" type="text/html">
-        {{#companies}}
-        <div class="box-agent">
-            <div class="box-agents-title">
-                <div class="box-agents-title__name">{{name}}</div>
-                {{#isCertified}}
-                <div class="box-agents-title__icon"></div>
-                {{/isCertified}}
-            </div>
-            <hr/>
-            <div class="box-agents-content">
-                <img class="box-agents-content__photo" src="{{image}}">
-                <div class="box-agents-content__description">{{description}}</div>
-            </div>
-            <div class="box-agents-settings">
-                <div class="box-agents-settings__price">Desde: {{rate}} / {{hours}} horas</div>
-                <div class="box-agents-settings__button">Contratar</div>
-            </div>
-        </div>
-        {{/companies}}  
-    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
 </body>
 </html>

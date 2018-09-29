@@ -1,7 +1,5 @@
-// Import Gulp and Plumber
 var gulp = require('gulp');
 
-// SASS compilation task
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
@@ -22,7 +20,7 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./dist'));
 });
 
-// BrowserSync serve task
+
 var browser = require('browser-sync');
 var reload = browser.reload;
 gulp.task('serve', function () {
@@ -36,7 +34,7 @@ gulp.task('serve', function () {
 	});
 });
 
-// Watch task
+
 gulp.task('watch', function () {
 	gulp.watch("./src/css/**", ['sass']);
 	gulp.watch("./src/html/**", ['html']);
@@ -44,20 +42,14 @@ gulp.task('watch', function () {
 	gulp.watch("./src/js/**", ['copyJavaScriptFiles']);
 });
 
-// HTML generation task
-// var fs = require("fs");
-// var inject = require('gulp-inject-string');
 gulp.task('html', function () {
-	// var cssContent = fs.readFileSync("./dist/main.css", "utf8");
 	gulp.src("./src/html/*.html")
-		// .pipe(inject.after('style amp-custom>', cssContent))
 		.pipe(gulp.dest("./dist"))
 		.pipe(reload({
 			stream: true
 		}));
 });
 
-// Copy all files at the root level (app)
 gulp.task('copyImages', function() {
 	gulp.src([
 		'./src/images/*',
@@ -67,7 +59,6 @@ gulp.task('copyImages', function() {
 	}));
 });
 
-// Copy all files at the root level (app)
 gulp.task('copyJsonFiles', function() {
 	gulp.src([
 		'./src/json/*',
@@ -77,7 +68,6 @@ gulp.task('copyJsonFiles', function() {
 	}));
 });
 
-// Copy all files at the root level (app)
 gulp.task('copyJavaScriptFiles', function() {
 	gulp.src([
 		'./src/js/*',
@@ -87,5 +77,4 @@ gulp.task('copyJavaScriptFiles', function() {
 	}));
 });
 
-// Default task
 gulp.task('default', ['sass', 'html', 'watch', 'serve', 'copyImages', 'copyJsonFiles','copyJavaScriptFiles']);

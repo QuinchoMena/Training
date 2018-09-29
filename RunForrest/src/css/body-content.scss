@@ -9,20 +9,22 @@
 }
 
 hr{
-    background-color: $grey60;
+    background-color: $light-gray;
+
 }
-.main-title{
+.mainTitle{
     font-size: 24px;
     line-height: 28px;
     margin: 15px 95px 15px 27px;
     width: 70%;
 }
-.search-bar{
+
+.searchBar{
     @extend %flexRow;
     align-items: center;
     border: 2px solid;
     border-radius: 20px;
-    border-color: $grey;
+    border-color: $gray;
     height: 44px;
     margin: 15px 30px 17px 27px;
 
@@ -30,7 +32,7 @@ hr{
         font-size: 18px;
         font-weight: normal;
         width: 250px;
-        color: $grey;
+        color: $gray;
         margin: 13px 0px 10px 15px;
     }
 
@@ -45,7 +47,7 @@ hr{
 }
 
 
-.box-agents-title{
+.boxAgentsTitle{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,7 +64,6 @@ hr{
         background-position: center;
         background-size: cover;
     }
-
 }
 
 #agents{
@@ -70,12 +71,13 @@ hr{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.box-agent{
+
+.boxAgent{
     margin-top: 18px;
     margin-bottom: 25px; 
     width: 300px;
 }
-.box-agents-content{
+.boxAgentsContent{
     @extend %flexRow;
     align-items: center;
 
@@ -91,10 +93,9 @@ hr{
         margin-left: 25px;
 
     }
-
 }
 
-.box-agents-settings{
+.boxAgentSettings{
     @extend %flexRow;
     align-items: center;
     justify-content: space-between;
@@ -117,10 +118,7 @@ hr{
         text-align: justify;
         font-size: 14px;
     }
-
 }
-
-
 
 @media(min-width: 768px)
 {
@@ -130,14 +128,14 @@ hr{
         background-position: right;
         background-size: cover;
     }
-    .main-title{
+    .mainTitle{
         position: absolute;
         top: 300px;
         color: $white;
         font-size: 36px;
         width: 50%;
     }
-    .search-bar{
+    .searchBar{
         position: absolute;
         top: 400px;
         font-size: 36px;
@@ -149,16 +147,16 @@ hr{
         }
     }
 }
+
 @media(min-width: 1024px)
 {
     .frame{
         height: 500px;
     }
-    .main-title{
+    .mainTitle{
         width: 60%;
     }
-    .search-bar{
+    .searchBar{
         width: 568px;
     }
-
 }
