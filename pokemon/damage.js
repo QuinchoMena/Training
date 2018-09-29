@@ -22,13 +22,10 @@ class Pokemon {
   }
 }
 
-
 function damage(pPokemon1,pPokemon2){
   let resultdamage = 50 * (pPokemon1.pAttack/pPokemon2.pDefense) * effective(pPokemon1.pType,pPokemon2.pType);
   return resultdamage;
 }
-
-
 
 function getEffectivenessPoints(level){
   var point;
@@ -50,8 +47,6 @@ function getEffectivenessPoints(level){
 
    return points[level]();
 }
-
-
 
 function effective(pTypePokemon1,pTypePokemon2){
   var pokemonEffectiveness
@@ -106,38 +101,29 @@ function effective(pTypePokemon1,pTypePokemon2){
       pokemonEffectiveness = getEffectivenessPoints('Little');
     },
     'default' : function () {
-      pokemonEffectiveness = 'Sorry, the type of Pokemon dont exist';
+      pokemonEffectiveness = 'Sorry, the type of Pokemon doesn´t exist';
     }
   };
-  (pokemonType[pTypePokemon1+"-"+pTypePokemon2] || pokemonType['default'])();
+  (pokemonType[`${pTypePokemon1}-${pTypePokemon2}`] || pokemonType['default'])();
 
   return pokemonEffectiveness;
-
 }
-
-
-
-
 
 function main(){
   const pokemonFireCharizard = new Pokemon("Charizard","fire",Math.random() * 10,Math.random() * 10);
   const pokemonFireCharmander = new Pokemon("Charmander","fire",Math.random() * 10,Math.random() * 10);
   const pokemonFireHoundour = new Pokemon("Houndour","fire",Math.random() * 10,Math.random() * 10);
-  
   const pokemonGrassBulbasaur = new Pokemon("Bulbasaur","grass",Math.random() * 10,Math.random() * 10);
   const pokemonGrassTreecko = new Pokemon("Treecko","grass",Math.random() * 10,Math.random() * 10);
   const pokemonGrassBudew = new Pokemon("Budew","grass",Math.random() * 10,Math.random() * 10);
-
   const pokemonWaterHorsea = new Pokemon("Horsea","water",Math.random() * 10,Math.random() * 10);
   const pokemonWaterLapras = new Pokemon("Lapras","water",Math.random() * 10,Math.random() * 10);
   const pokemonWaterStaryu = new Pokemon("Staryu","water",Math.random() * 10,Math.random() * 10);
-
   const pokemonElectricPikachu = new Pokemon("Pikachu","electric",Math.random() * 10,Math.random() * 10);
   const pokemonElectricAmpharos = new Pokemon("Ampharos","electric",Math.random() * 10,Math.random() * 10);
   const pokemonElectricRotom = new Pokemon("Rotom","electric",Math.random() * 10,Math.random() * 10);
 
   let fights = Math.ceil(Math.random() * 10);
-
 
   var pokemonArray = [
   pokemonFireCharizard,
@@ -155,8 +141,8 @@ function main(){
 ];
 
   for (var i = 0; i < fights; i++){
-      var pokemonAttack = pokemonArray[Math.floor(Math.random()*pokemonArray.length)];
-      var pokemonDefense = pokemonArray[Math.floor(Math.random()*pokemonArray.length)];
+      var pokemonAttack = pokemonArray[Math.floor(Math.random() * pokemonArray.length)];
+      var pokemonDefense = pokemonArray[Math.floor(Math.random() * pokemonArray.length)];
 
       let result = damage(pokemonAttack,pokemonDefense);
       result = Math.ceil(result);
