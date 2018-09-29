@@ -1,9 +1,10 @@
 @import "colors";
+
 .page{
 	font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     background-color: $white;
-    color: $grey34;
+    color: $grey-scorpion;
     margin: 0 0 1px;
     height: 100%;
     border-top: 10px solid $black;
@@ -26,7 +27,6 @@
     color: $dark-grey;
     font-size: 100%;
 }
-
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .paragraph{

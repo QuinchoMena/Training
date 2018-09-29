@@ -1,5 +1,7 @@
 @import "colors";
+
 .box{
+    col-xs-12 col-md-4 col-xl-4;
     margin-bottom: 30px;
     margin-top: 22px;
     float: left;
@@ -21,26 +23,26 @@
 
         &__title{
             position: relative;
-            padding: 14px;
             background-color: $black;
             display: inline-block;
             color: $white;
             margin-top: 14px;
+            padding: 12px 18px;
             text-align: center;
             text-decoration: none;
             font: 14px/100% 'Open Sans', sans-serif;
-            border-radius: 5px;
-            border-radius: 5px;
-            padding: 12px 18px;
+            border-radius: 5px;        
             font-size: 1em;
         }
     }
 }
 
 .photo{
+    width: 343px;
+    height: 305px;
     width: 90%;
     background-color: $white;
-    border: 1px solid $grey84;
+    border: 1px solid $grey-alto;
     position: relative;
     float: left;
     margin: 16px 13px 8px 0;
