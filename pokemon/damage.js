@@ -148,7 +148,6 @@ function main(){
       result = Math.ceil(result);
       console.log(result);
   }
-
 }
 
 main()
