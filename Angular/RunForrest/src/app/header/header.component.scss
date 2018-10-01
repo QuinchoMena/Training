@@ -1,0 +1,43 @@
+@import "../_variables.scss";
+@import "../_colors.scss";
+
+.frame{
+    height: 304px;
+    background-image: url("../images/banner-mobile.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.mainTitle{
+    font-size: 24px;
+    line-height: 28px;
+    margin: 15px 95px 15px 27px;
+    width: 70%;
+}
+
+@media(min-width: 768px)
+{
+    .frame{
+        height: 428px;
+        background-image: url("../images/banner.png");
+        background-position: right;
+        background-size: cover;
+    }
+    .mainTitle{
+        position: absolute;
+        top: 300px;
+        color: $white;
+        font-size: 36px;
+        width: 50%;
+    }
+}
+
+@media(min-width: 1024px)
+{
+    .frame{
+        height: 500px;
+    }
+    .mainTitle{
+        width: 60%;
+    }
+}
