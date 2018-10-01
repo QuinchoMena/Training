@@ -46,7 +46,6 @@ hr{
     }
 }
 
-
 .boxAgentsTitle{
     display: flex;
     flex-direction: row;
@@ -77,6 +76,7 @@ hr{
     margin-bottom: 25px; 
     width: 300px;
 }
+
 .boxAgentsContent{
     @extend %flexRow;
     align-items: center;
