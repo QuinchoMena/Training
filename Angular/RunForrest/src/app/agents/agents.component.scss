@@ -1,0 +1,76 @@
+@import "../_variables.scss";
+@import "../_colors.scss";
+
+.boxAgentsTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+
+    &__name{
+        font-size: 18px;
+    }
+    &__icon{
+        width: 26px;
+        height: 26px;
+        background-image: url("../../assets/certified.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+#agents{
+    @extend %flexRow;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.boxAgent{
+    margin-top: 18px;
+    margin-bottom: 25px; 
+    width: 300px;
+}
+
+.boxAgentsContent{
+    @extend %flexRow;
+    align-items: center;
+
+    &__photo{
+        height: 120px;
+        background-position: center;
+        background-size: cover;
+    }
+    &__description{
+        text-align: justify;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 25px;
+
+    }
+}
+
+.boxAgentSettings{
+    @extend %flexRow;
+    align-items: center;
+    justify-content: space-between;
+
+    &__button{
+        background-color: $black;
+        color: $white;
+        font-size: 14px;
+        font-weight: normal;
+        border-radius: 18px; 
+        padding: 8px 30px 9px 30px;
+        margin-right: 24px;
+        margin-top: 20px;
+        width: 80px;
+        text-align: center;
+    }
+    &__price{
+        margin-right: 13px;
+        margin-top: 18px;
+        text-align: justify;
+        font-size: 14px;
+    }
+}
