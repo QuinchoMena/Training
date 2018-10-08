@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-agents',
@@ -9,13 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class AgentsComponent implements OnInit {
 
-  agents$: Object;
+  private agents: any = {};
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getAgents().subscribe(
-      data => this.agents$ = data 
+    this.data.getAgents().subscribe(data => this.agents = data);
+    this.data.currentData.subscribe(
+      data => this.agents.companies = data
     );
   }
 }

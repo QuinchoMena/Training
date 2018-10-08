@@ -1,4 +1,4 @@
 <div class="searchBar">
-    <input type="text" class="searchBar__title" placeholder="Buscar por Ubicacion" #box (keyup.enter)="onEnter(box.value)">
-    <div class="searchBar__icon" (click)="onEnter(box.value)"></div>
+    <input  (keyup)="keyUp(event$)" #searchText type="text" class="searchBar__title" placeholder="Buscar por Ubicacion">
+    <div  (click)="lensClick()" id="lensButton" class="searchBar__icon" ></div>
 </div>

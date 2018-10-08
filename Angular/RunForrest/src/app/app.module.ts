@@ -10,6 +10,7 @@ import { BodyContentComponent } from './body-content/body-content.component';
 import { AgentsComponent } from './agents/agents.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MyfilterPipe } from './myfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     BodyContentComponent,
     AgentsComponent,
-    FooterComponent
+    FooterComponent,
+    MyfilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
-<div *ngIf="agents$ && agents$.companies">
-    <div class="boxAgent" *ngFor="let agent of agents$.companies">
+<div class="agents" *ngIf="agents">
+    <div class="boxAgent" *ngFor="let agent of agents.companies">
         <div class="boxAgentsTitle">
             <div class="boxAgentsTitle__name">{{agent.name}}</div>
             <div *ngIf="agent.isCertified" class="boxAgentsTitle__icon"></div>
