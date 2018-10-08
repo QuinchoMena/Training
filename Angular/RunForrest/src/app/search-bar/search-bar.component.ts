@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
+  input = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  onEnter(input: string) { 
+    this.input = input; 
+    console.log(input);
   }
 
 }
