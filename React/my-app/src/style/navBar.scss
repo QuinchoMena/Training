@@ -1,0 +1,54 @@
+@import "./colors";
+@import "./variables";
+
+.navbar{
+    width: 100%;
+    height: 77px;
+    border: 0px $black solid;
+    @extend %flexRow;
+    justify-content: space-between;
+    background-color: $black;
+
+    &__logo{
+        margin-top: 13px;
+        margin-left: 19px;
+   }
+}
+
+.navbarMenu{
+    margin-right: 20px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+
+    &__rectangle{
+        margin-top: 8px;
+        width: 53px;
+        height: 9px;
+        background-color: $white;
+    }
+    &__text{
+        display: none;
+    }
+}
+
+@media(min-width: 1024px){
+    .navbarMenu__rectangle{
+        display: none;
+    }
+    .navbarMenu__text{
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        color: $white;
+    }
+    .linkAgents,.linkContact,.linkEnter{
+        text-decoration: none;
+        color: $white;
+    }
+    .linkContact{
+        margin-left: 10px;
+    }
+    .linkEnter{
+        margin-left: 60px;
+    }
+}

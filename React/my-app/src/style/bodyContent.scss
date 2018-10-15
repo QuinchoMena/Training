@@ -1,0 +1,79 @@
+@import "./colors";
+@import "./variables";
+
+.frame{
+    height: 304px;
+    background-image: url("../assets/banner-mobile.png");
+    background-position: center;
+    background-size: cover;
+}
+
+hr{
+    background-color: $light-gray;
+}
+
+.mainTitle{
+    font-size: 24px;
+    line-height: 28px;
+    margin: 15px 95px 15px 27px;
+    width: 70%;
+}
+
+.searchBar{
+    @extend %flexRow;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: $gray;
+    height: 44px;
+    margin: 15px 30px 17px 27px;
+
+    &__title{
+        font-size: 18px;
+        font-weight: normal;
+        width: 250px;
+        color: $gray;
+        margin: 13px 0px 10px 15px;
+    }
+}
+
+@media(min-width: 768px)
+{
+    .frame{
+        height: 428px;
+        background-image: url("../assets/banner.png");
+        background-position: right;
+        background-size: cover;
+    }
+    .mainTitle{
+        position: absolute;
+        top: 300px;
+        color: $white;
+        font-size: 36px;
+        width: 50%;
+    }
+    .searchBar{
+        position: absolute;
+        top: 400px;
+        font-size: 36px;
+        background-color: $white;
+        width: 663px;
+
+        &__title{
+            width: 400px;
+        }
+    }
+}
+
+@media(min-width: 1024px)
+{
+    .frame{
+        height: 500px;
+    }
+    .mainTitle{
+        width: 60%;
+    }
+    .searchBar{
+        width: 568px;
+    }
+}
