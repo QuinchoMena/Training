@@ -1,15 +1,15 @@
+@import "colors";
 .page{
 	font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    background-color: white;
-    color: #575757;
+    background-color: $white;
+    color: $grey34;
     margin: 0 0 1px;
     height: 100%;
-    line-height: 1.7em;
-    border-top: 10px solid black;
+    border-top: 10px solid $black;
 }
 
-.bg{
+.background{
 	background-image: url("/images/bg.png");
 	background-position: left top;
 	background-repeat: repeat;
@@ -17,41 +17,23 @@
 
 .link{
     text-decoration: underline;
-    color: #666666;
+    color: $dark-grey;
+    margin-left: 25px;
 }
 
 .paragraph{
     text-decoration: none;
-    color: #666666;
+    color: $dark-grey;
+    font-size: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px)
-{
-    .paragraph{
-        font-size: 19px;
-    }
-
-}
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .paragraph{
-        font-size: 26px;
+        font-size: 22px;
     }
  }
 
-@media(max-width: 768px)
-{
-    .row, body, .container, .pages {
-        width: 100%;
-        min-width: 0;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        float: left;
-    }
-
-}
 
 
 

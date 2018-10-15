@@ -1,0 +1,68 @@
+@import "colors";
+.nav-menu{
+    display: flex;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    margin-top: 15px;
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    &__item{
+        &__link{
+            font-size: 17px;
+            color: #666666;
+            display: block;
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+    }
+}
+
+.title{
+    &__maintitle{
+        font-size: 42px;
+        color: $dark-grey;
+        padding-top: 13px;
+        font-weight: 600;
+
+        &__span{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+
+    &__subtitle{
+        font-size: 15px;
+        color: $dark-grey;
+        text-align: left;
+        border-bottom: 1px solid $grey;
+        margin-top: 7px;
+        padding-bottom: 18px;
+
+    }
+}
+
+ @media (min-width: 768px){
+    .nav-menu__items{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .nav-menu__item__link{
+        margin-left: 12px;
+        font-size: 22px;
+    }
+ }
+
+ @media (min-width: 1200px){
+    .nav-menu__item__link{
+        margin-left: 12px;
+        font-size: 17px;
+    }
+ }
+
+
